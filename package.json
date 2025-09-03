@@ -1,5 +1,5 @@
 {
-  "name": "ali-oss",
+  "name": "@summer-lights/ali-oss",
   "version": "6.23.0",
   "description": "aliyun oss(object storage service) node client",
   "main": "./lib/client.js",
@@ -55,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ali-sdk/ali-oss.git"
+    "url": "git+https://github.com/scutrobotlab/ali-oss.git"
   },
   "keywords": [
     "oss",
