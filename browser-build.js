@@ -91,7 +91,7 @@ function build(options, callback) {
         }
         code = minified.code;
       }
-      code = license + `(function(global){${code}})(window)`;
+      code = license + `(function(global){${code}})(self)`;
       callback(null, code);
     });
 }
