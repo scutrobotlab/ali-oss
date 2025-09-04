@@ -1,6 +1,6 @@
 {
   "name": "@summer-lights/ali-oss",
-  "version": "6.23.0",
+  "version": "6.23.1",
   "description": "aliyun oss(object storage service) node client",
   "main": "./lib/client.js",
   "files": [
