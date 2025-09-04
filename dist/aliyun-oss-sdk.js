@@ -1,4 +1,4 @@
-// Aliyun OSS SDK for JavaScript v6.23.0
+// Aliyun OSS SDK for JavaScript v6.23.1
 // Copyright Aliyun.com, Inc. or its affiliates. All Rights Reserved.
 // License at https://github.com/ali-sdk/ali-oss/blob/master/LICENSE
 (function(global){(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.OSS = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
@@ -2209,7 +2209,7 @@ proto._deleteFileSafe = function _deleteFileSafe(filepath) {
 },{"../common/callback":24,"../common/image":27,"../common/object/asyncSignatureUrl":31,"../common/object/copyObject":32,"../common/object/delete":33,"../common/object/deleteMulti":34,"../common/object/deleteObjectTagging":35,"../common/object/generateObjectUrl":36,"../common/object/get":37,"../common/object/getACL":38,"../common/object/getBucketVersions":39,"../common/object/getObjectMeta":40,"../common/object/getObjectTagging":41,"../common/object/getObjectUrl":42,"../common/object/getSymlink":43,"../common/object/head":44,"../common/object/putACL":45,"../common/object/putObjectTagging":46,"../common/object/putSymlink":47,"../common/object/signPostObjectPolicyV4":48,"../common/object/signatureUrl":49,"../common/object/signatureUrlV4":50,"../common/utils/isBlob":68,"../common/utils/isBuffer":69,"../common/utils/isFile":71,"../common/utils/obj2xml":76,"../common/utils/parseRestoreInfo":78,"@babel/runtime/helpers/asyncToGenerator":85,"@babel/runtime/helpers/interopRequireDefault":86,"@babel/runtime/regenerator":93,"copy-to":107,"core-js/modules/es.array.map.js":318,"core-js/modules/es.function.name.js":322,"core-js/modules/es.number.constructor.js":324,"core-js/modules/es.object.assign.js":325,"core-js/modules/es.object.keys.js":328,"core-js/modules/es.object.to-string.js":329,"core-js/modules/es.promise.js":333,"core-js/modules/es.regexp.exec.js":338,"core-js/modules/es.regexp.to-string.js":339,"core-js/modules/es.string.replace.js":345,"core-js/modules/web.dom-collections.for-each.js":380,"fs":102,"merge-descriptors":428,"mime":430,"path":439}],6:[function(require,module,exports){
 "use strict";
 
-exports.version = '6.23.0';
+exports.version = '6.23.1';
 
 },{}],7:[function(require,module,exports){
 "use strict";
@@ -6946,7 +6946,7 @@ exports.isBuffer = isBuffer;
 
 }).call(this)}).call(this,{"isBuffer":require("../../../node_modules/is-buffer/index.js")})
 },{"../../../node_modules/is-buffer/index.js":409}],70:[function(require,module,exports){
-(function (process){(function (){
+(function (process,global){(function (){
 "use strict";
 
 require("core-js/modules/es.array.includes.js");
@@ -6956,15 +6956,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.isDingTalk = void 0;
 function isDingTalk() {
-  if (!window) return false;
-  if (process.browser && window.navigator.userAgent.toLowerCase().includes('aliapp(dingtalk')) {
+  if (process.browser && global.navigator.userAgent.toLowerCase().includes('aliapp(dingtalk')) {
     return true;
   }
   return false;
 }
 exports.isDingTalk = isDingTalk;
 
-}).call(this)}).call(this,require('_process'))
+}).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":538,"core-js/modules/es.array.includes.js":315,"core-js/modules/es.string.includes.js":342}],71:[function(require,module,exports){
 "use strict";
 

@@ -1,6 +1,5 @@
 export function isDingTalk() {
-  if (!window) return false;
-  if (process.browser && window.navigator.userAgent.toLowerCase().includes('aliapp(dingtalk')) {
+  if (process.browser && global.navigator.userAgent.toLowerCase().includes('aliapp(dingtalk')) {
     return true;
   }
   return false;
